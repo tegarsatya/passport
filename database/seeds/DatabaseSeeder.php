@@ -1,5 +1,6 @@
 <?php
 
+use Facade\Ignition\Tabs\Tab;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->call(TableSender::class);
     }
 }

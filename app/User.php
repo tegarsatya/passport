@@ -36,4 +36,9 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function tweets()
+    {
+        return $this->hasMany(Tweet::class, 'user_id', 'id');
+    }
 }
